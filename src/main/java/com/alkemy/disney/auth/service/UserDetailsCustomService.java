@@ -36,14 +36,14 @@ public class UserDetailsCustomService implements UserDetailsService {
    }
 
 
-    //TODO: Probar el save despues
+
     //SingUp
     public ResponseEntity<?> save (UserDTO userDTO){
        if(userRepository.existsByUsername(userDTO.getUsername())){
            throw new ParamNotFound("Usuario existente");
        }
        UserEntity userEntity = userMapper.userDto2Entity(userDTO);
-       userRepository.save(userEntity);
+        userEntity = userRepository.save(userEntity);
         if (userEntity != null) {
             emailService.sendWelcomeEmailTo(userEntity.getUsername());
         }

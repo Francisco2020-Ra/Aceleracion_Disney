@@ -1,13 +1,10 @@
 package com.alkemy.disney.auth.mapper;
 
-import com.alkemy.disney.auth.config.SecurityConfiguration;
 import com.alkemy.disney.auth.dto.UserDTO;
 import com.alkemy.disney.auth.entity.RoleEntity;
 import com.alkemy.disney.auth.entity.UserEntity;
 import com.alkemy.disney.auth.entity.enumrole.ERole;
 import com.alkemy.disney.auth.repository.RoleRespository;
-import com.alkemy.disney.auth.repository.UserRepository;
-import com.alkemy.disney.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.GrantedAuthority;
@@ -17,7 +14,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -26,10 +22,8 @@ public class UserMapper {
 
 
     private PasswordEncoder encoder;
-    @Autowired
-    private UserRepository userRepository;
-    @Autowired
-    private EmailService emailService;
+
+
     @Autowired
     private RoleRespository roleRespository;
 
@@ -80,14 +74,8 @@ public class UserMapper {
     }
 
     public Collection<? extends GrantedAuthority> userEntityRole2Colletion (UserEntity userEntity){
-        Collection<? extends GrantedAuthority> authorities;
-
-        List<GrantedAuthority> authoritie = userEntity.getRoles().stream()
+        return userEntity.getRoles().stream()
                 .map(role -> new SimpleGrantedAuthority(role.getName().name()))
                 .collect(Collectors.toList());
-
-        authorities = authoritie;
-        return authorities;
-
     }
 }
