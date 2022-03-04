@@ -1,0 +1,609 @@
+{
+	"info": {
+		"_postman_id": "b8d9ed11-feb0-4932-a082-234a07655992",
+		"name": "Disney",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Personajes",
+			"item": [
+				{
+					"name": "personajes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ2MzQxMjI2LCJpYXQiOjE2NDYzMzc2MjZ9._W3niC-IICyMF7-PEmCJCZn66Rm8RUZkAmUGb4naa5M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"imagen\": \"/uer/temp/imgFran.jpg\",\r\n    \"nombre\": \"Hijitus\",\r\n    \"edad\" : 15,\r\n    \"peso\" : 50.5,\r\n    \"historia\" : \"Es un amiguito que le encanta la investigación y descubrir a los malos\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personajes/all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ2MzQxMjI2LCJpYXQiOjE2NDYzMzc2MjZ9._W3niC-IICyMF7-PEmCJCZn66Rm8RUZkAmUGb4naa5M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/characters/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personajes/idUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ2MzQxMjI2LCJpYXQiOjE2NDYzMzc2MjZ9._W3niC-IICyMF7-PEmCJCZn66Rm8RUZkAmUGb4naa5M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"imagen\": \"/uer/temp/imgFran.jpg\",\r\n    \"nombre\": \"Pluto Dog\",\r\n    \"edad\" : 11,\r\n    \"peso\" : 30.8,\r\n    \"historia\" : \"Es un raton amigo de Pluto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personajes/idDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ1OTkzOTM2LCJpYXQiOjE2NDU5OTAzMzZ9.6wjax5rShGRvF4y3hsb_b1tRdqSWTvwmWiEcp8JEBeU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/characters/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personajes/getDetailsById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ2MzQxMjI2LCJpYXQiOjE2NDYzMzc2MjZ9._W3niC-IICyMF7-PEmCJCZn66Rm8RUZkAmUGb4naa5M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/characters/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personajes?filter",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ2MzQxMjI2LCJpYXQiOjE2NDYzMzc2MjZ9._W3niC-IICyMF7-PEmCJCZn66Rm8RUZkAmUGb4naa5M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/characters?order=desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "hijitus",
+									"disabled": true
+								},
+								{
+									"key": "movies",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "desc"
+								},
+								{
+									"key": "edad",
+									"value": "11",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "characters/{id}/movies/{idMovies}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ2MzQxMjI2LCJpYXQiOjE2NDYzMzc2MjZ9._W3niC-IICyMF7-PEmCJCZn66Rm8RUZkAmUGb4naa5M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/characters/4/movies/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"4",
+								"movies",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Peliculas",
+			"item": [
+				{
+					"name": "movies",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ1OTkzOTM2LCJpYXQiOjE2NDU5OTAzMzZ9.6wjax5rShGRvF4y3hsb_b1tRdqSWTvwmWiEcp8JEBeU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"imagen\": \"/user/temp/imgBrasil.jpg\",\r\n    \"titulo\": \"Micky\",\r\n    \"calificacion\": 5,\r\n    \"fechaCreacion\" : \"1990-02-13\",\r\n    \"generoId\": 6,\r\n    \"personajes\": [\r\n        {\r\n            \"imagen\": \"/user/temp/imgJesusRedentor.jpg\",\r\n            \"nombre\": \"El Micky, negro\",\r\n            \"edad\": 12,\r\n            \"peso\": 30.0,\r\n            \"historia\": \"El favorito de todos!\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies/all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ1OTkzOTM2LCJpYXQiOjE2NDU5OTAzMzZ9.6wjax5rShGRvF4y3hsb_b1tRdqSWTvwmWiEcp8JEBeU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"all"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies/idUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ1OTkzOTM2LCJpYXQiOjE2NDU5OTAzMzZ9.6wjax5rShGRvF4y3hsb_b1tRdqSWTvwmWiEcp8JEBeU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"imagen\": \"/user/temp/imgBrasil.jpg\",\r\n    \"titulo\": \"Mini\",\r\n    \"calificacion\": 3,\r\n    \"fechaCreacion\" : \"1990-02-13\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies/idDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ1OTkzOTM2LCJpYXQiOjE2NDU5OTAzMzZ9.6wjax5rShGRvF4y3hsb_b1tRdqSWTvwmWiEcp8JEBeU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/movies/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies/getDetailsById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ1OTkzOTM2LCJpYXQiOjE2NDU5OTAzMzZ9.6wjax5rShGRvF4y3hsb_b1tRdqSWTvwmWiEcp8JEBeU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/movies/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies?filter",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ1OTkzOTM2LCJpYXQiOjE2NDU5OTAzMzZ9.6wjax5rShGRvF4y3hsb_b1tRdqSWTvwmWiEcp8JEBeU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/movies?name=Monster Ink",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Monster Ink"
+								},
+								{
+									"key": "idGenero",
+									"value": "6",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genero",
+			"item": [
+				{
+					"name": "generos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ2MzQxMjI2LCJpYXQiOjE2NDYzMzc2MjZ9._W3niC-IICyMF7-PEmCJCZn66Rm8RUZkAmUGb4naa5M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"imagen\": \"/user/temp/miccky.jpg\",\r\n    \"nombre\" : \"El Micky\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/generos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"generos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ2MzQxMjI2LCJpYXQiOjE2NDYzMzc2MjZ9._W3niC-IICyMF7-PEmCJCZn66Rm8RUZkAmUGb4naa5M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/generos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"generos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generos/id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY2lzY29yYWZhZWxyb21lcm9AZ21haWwuY29tIiwiZXhwIjoxNjQ2MzQxMjI2LCJpYXQiOjE2NDYzMzc2MjZ9._W3niC-IICyMF7-PEmCJCZn66Rm8RUZkAmUGb4naa5M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"imagen\": \"/user/temp/miccky.jpg\",\r\n\t\"nombre\": \"Miccky\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/generos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"generos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "singUp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuQGdtYWlsLmNvbSIsImV4cCI6MTY0NTg0OTAyMCwiaWF0IjoxNjQ1ODEzMDIwfQ.ntrMsBAzbY1mG1-xIlIZtcKcOFhLpFnF4ek_BdlAY4s",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"username\": \"franciscorafaelromero@gmail.com\",\r\n\t\"password\" : \"password10\",\r\n    \"role\":[\"admin\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/singup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"singup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"franciscorafaelromero@gmail.com\",\r\n\t\"password\" : \"password10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/singin",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"singin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
